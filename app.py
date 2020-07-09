@@ -22,12 +22,13 @@ def index():
 
 #Declearing the data path
 data_path = "s3://googlestockdata/data/google_stock_data.csv"
+save_path = "file:/home/hadoopuser/Documents/Google-Stock-Price-Prediction/Stock_Model"
 
 @app.route('/model-train')
 def train():
     try:
         df = data_processing(data_path)
-        rmse, r2 = model_training(sqlContext, df)
+        rmse, r2 = model_training(sqlContext, df, save_path)
         return render_template('modeltraining.html',rmse_error=rmse, r2_error=r2)
     except:
         print('Path is not found')
