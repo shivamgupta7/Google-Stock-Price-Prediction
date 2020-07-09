@@ -26,7 +26,7 @@ def data_processing(path):
     return df
 
 
-def model_training(sqlContext, dataframe):
+def model_training(sqlContext, dataframe, save_path):
     try:
         data = sqlContext.createDataFrame(dataframe)
 
@@ -50,7 +50,7 @@ def model_training(sqlContext, dataframe):
         rmse = trainingSummary.rootMeanSquaredError
         r2 =  trainingSummary.r2
         #saving the model
-        regressor.save("file:/home/hadoopuser/Documents/Google-Stock-Price-Prediction/Stock_Model_{:.4f}".format(round(r2, 4)))
+        regressor.save(save_path)
         print("\nSuccesfully Saved")
     except:
         print("Model Training is not completed")
