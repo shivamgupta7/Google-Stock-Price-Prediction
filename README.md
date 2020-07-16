@@ -1,4 +1,8 @@
 # Google Stock Price Prediction
+
+![Python 3.6](https://img.shields.io/badge/python-3.6.9-orange) ![pip-3](https://img.shields.io/badge/pip-9.0.1-green) ![Python-Kafka 2.0.1](https://img.shields.io/badge/kafka--python-2.0.1-red) ![Pyspark 3.0.0](https://img.shields.io/badge/pyspark-3.0.0-yellowgreen) ![s3fs 0.4.2](https://img.shields.io/badge/s3fs-0.4.2-blue) ![pandas 1.0.5](https://img.shields.io/badge/pandas-1.0.5-green)
+![alpha-vantage 2.2.0](https://img.shields.io/badge/alpha--vantage-2.2.0-critical) ![boto3 1.14.16](https://img.shields.io/badge/boto3-1.14.16-ff69b4) ![Flask 1.1.2](https://img.shields.io/badge/Flask-1.1.2-009e73)
+
 Using ALPHA VANTAGE API to predict google stock price.
 
 - Using [ALPHA VANTAGE](https://www.alphavantage.co/) to genrate API Key.
@@ -75,3 +79,5 @@ Using ALPHA VANTAGE API to predict google stock price.
 - First start zookeeper and kafka server.
 - Run producer file. (``` python3 consumer.py ```)
 - Run app file. (``` python3 app.py ```)
+
+![GIF](readme_resources/how_to_run_project_on_localhost.gif)
