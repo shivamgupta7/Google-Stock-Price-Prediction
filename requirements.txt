@@ -24,7 +24,6 @@ mccabe==0.6.1
 multidict==4.7.6
 numpy==1.19.0
 pandas==1.0.5
-pkg-resources==0.0.0
 py4j==0.10.9
 pylint==2.5.3
 pyspark==3.0.0
