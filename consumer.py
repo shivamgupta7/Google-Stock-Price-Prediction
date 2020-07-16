@@ -30,7 +30,7 @@ def stock_prediction(sqlContext,load_model):
                 close_value = predictions.select('Close').collect()[0].__getitem__('Close')
                 print(msg.key)
                 date_time = msg.key.decode('utf-8')
-                return predict_value, close_value, date_time
+                return round(predict_value, 4), close_value, date_time
         except:
             print('Debug the above lines of code')
 
