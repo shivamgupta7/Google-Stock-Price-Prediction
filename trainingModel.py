@@ -50,8 +50,8 @@ def model_training(sqlContext, dataframe, save_path):
         rmse = trainingSummary.rootMeanSquaredError
         r2 =  trainingSummary.r2
         #saving the model
-        regressor.save(save_path)
-        print("\nSuccesfully Saved")
+        regressor.write().overwrite().save(save_path)
+        print("\nSuccessfully Saved.")
     except:
         print("Model Training is not completed")
 
