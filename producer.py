@@ -2,14 +2,14 @@
 from time import sleep
 from kafka import KafkaProducer
 from alpha_vantage.timeseries import TimeSeries
-import random
+import os
 import json
 
 #Function to get the data from alphavantage
 def get_data():
     try:
         ticker = 'GOOGL'
-        api_key = open('alpha_key.txt').read()
+        api_key = os.getenv("ALPHAVANTAGE_API_KEY")
         time = TimeSeries(key=api_key, output_format='json')
         data, metadata = time.get_intraday(symbol=ticker, interval='1min', outputsize='full')
         return data
