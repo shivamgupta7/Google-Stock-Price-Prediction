@@ -1,0 +1,9 @@
+First you must create AlphaVantage API key using alphavantage website: https://www.alphavantage.co/support/#api-key
+
+Then saving your key as an environment variable in Linux – From your terminal, type in:
+
+$export ALPHAVANTAGE_API_KEY=YOUR_ALPHAVANTAGE_API
+
+If you want to check then type in terminal:
+
+$echo $ALPHAVANTAGE_API_KEY

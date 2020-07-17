@@ -1,0 +1,15 @@
+Go to Identity and Access Management (IAM) services and create user with programmatic access type
+Add user to group with AmazonS3FullAccess and download credentials.
+
+After download save credentials to enviornment variable:
+
+1. Go to terminal and create folder '.aws':
+$ mkdir .aws
+
+2. Go to inside folder and create file 'credentials':
+nano credentials
+
+3. After open file save credentials like this:
+[default]
+aws_access_key_id=YOUR_ACCESSKEY_ID
+aws_secret_access_key=YOUR_SECRETACCESS_KEy
